@@ -18,7 +18,7 @@ class App extends React.Component {
       return <div>Error: {this.state.errorMessage}</div>;
     }
     if (!this.state.errormessage && this.state.lat) {
-      return <div>Lat: {this.state.lat}</div>;
+      return <SeasonDisplay lat={this.state.lat}/>
     } else {
       return <div>Loading!</div>;
     }
