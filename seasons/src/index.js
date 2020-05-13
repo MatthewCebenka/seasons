@@ -13,7 +13,7 @@ class App extends React.Component {
     );
   }
 
-  render() {
+  conditionalRender() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
@@ -22,6 +22,14 @@ class App extends React.Component {
     } else {
       return <Spinner message='Please accept the location request...'/>;
     }
+  }
+
+  render() {
+    return (
+      <div>
+        {this.conditionalRender()}
+      </div>
+    )
   }
 }
 
